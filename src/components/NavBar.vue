@@ -5,7 +5,7 @@
             <p>features</p>
             <p>pricing</p>
             <p>contact</p>
-            <a href="">login</a>
+            <a href="" class="btn">login</a>
         </nav>
     </div>
 </template>
@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
     $SoftBlue: hsl(231, 69%, 60%);
     $SoftRed: hsl(0, 94%, 66%);
     $DarkBlue: hsl(229, 31%, 21%);
@@ -42,16 +43,12 @@ export default {
                 font-size: 13px;
                 margin: 0 20px;
                 text-transform: uppercase;
+            }
+            p {
                 color:  $DarkBlue;
             }
             a {
-                text-decoration: none;
-                color: #fff;
-                padding: 10px 30px;
-                border-radius: 5px;
                 background-color: $SoftRed;
-                -webkit-box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
-                box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
             }
         }
     }
