@@ -7,7 +7,8 @@
             <button class="btn">Get it on Firefox</button>
         </div>
         <div class="ContainerImg">
-            <img src="" alt="">
+            <span class="containerImg__ovale"></span>
+            <img src="@/assets/illustration-hero.svg" alt="">
         </div>
     </header>
 </template>
@@ -28,21 +29,22 @@ export default {
     header {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        margin-top: 50px;
 
         .title {
-            margin-left: 11%;
-            width: 30%;
+            width: 475px;
+            margin: 70px 0  0 10%;
 
             h1 {
                 color: $DarkBlue;
                 font-weight: 500;
-                font-size: 40px;
+                font-size: 45px;
                 margin-bottom: 30px;
             }
             p {
                 color: $LightBlue;
                 line-height: 25px;
+                font-size: 17px;
             }
             button {
                 border: none;
@@ -56,6 +58,60 @@ export default {
                     color: $LightBlue;
                     box-shadow: 0px 10px 27px -12px rgba(128,128,128,1);
                 }
+            }
+        }
+        .ContainerImg {
+            max-width: 700px;
+            height: fit-content;
+            position: relative;
+            
+            img {
+                width: 100%;
+            }
+            .containerImg__ovale {
+                position: absolute;
+                width: 72%;
+                height: 70%;
+                top: 32%;
+                right: 0;
+                background-color: $SoftBlue;
+                border-radius: 200px 0px 0px 200px;
+                z-index: -1;
+            }
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        header {
+            .title {
+                width: 32%;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+
+        header {
+            .title {
+                margin: 50px 0 0 5%;
+            }
+            .ContainerImg {
+                max-width: 500px;
+            }
+        }
+    }
+    @media screen and (max-width: 965px) {
+        
+        header {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .title {
+                width: 90%;
+                text-align: center;
+                margin: 50px 0 0 0;
+            }
+            .ContainerImg {
+                max-width: 700px;
+                align-self: flex-end;
             }
         }
     }

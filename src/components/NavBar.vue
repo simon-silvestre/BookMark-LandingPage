@@ -2,10 +2,10 @@
     <div class="navBar">
         <img src="@/assets/logo-bookmark.svg" alt="logo de la marque">
         <nav>
-            <p>features</p>
-            <p>pricing</p>
-            <p>contact</p>
-            <a href="" class="btn">login</a>
+            <a href="">features</a>
+            <a href="">pricing</a>
+            <a href="">contact</a>
+            <button class="btn">login</button>
         </nav>
     </div>
 </template>
@@ -32,22 +32,24 @@ export default {
         img {
             width: auto;
             height: 25px;
-            margin-left: 11%;
+            margin-left: 10%;
         }
         nav {
             display: flex;
             align-items: center;
             margin-right: 11%;
 
-            p, a {
-                font-size: 13px;
+            a, button {
+                font-size: 12px;
                 margin: 0 20px;
                 text-transform: uppercase;
-            }
-            p {
-                color:  $DarkBlue;
+                text-decoration: none;
+                letter-spacing: 1px;
             }
             a {
+                color:  $DarkBlue;
+            }
+            button {
                 background-color: $SoftRed;
             }
         }

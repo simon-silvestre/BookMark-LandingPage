@@ -1,19 +1,36 @@
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar v-if="!mobileView" />
+    <MobileNav v-if="mobileView" />
     <Header />
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
+import MobileNav from '@/components/NavBarMobile.vue'
 import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
+    MobileNav,
     Header
+  },
+   data() {
+    return {
+        mobileView: false,
+    }
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth <= 965;
+    }
+  },
+  created() {
+    this.handleView();
+      window.addEventListener('resize', this.handleView);
   }
 }
 </script>
@@ -39,7 +56,8 @@ export default {
     color: #fff;
     background-color: $SoftBlue;
     padding: 10px 30px;
-    border-radius: 4px;
+    border: none;
+    border-radius: 5px;
     -webkit-box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
     box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
   }
