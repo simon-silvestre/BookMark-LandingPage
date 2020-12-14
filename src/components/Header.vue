@@ -32,7 +32,7 @@ export default {
         margin-top: 50px;
 
         .title {
-            width: 475px;
+            width: 480px;
             margin: 70px 0  0 10%;
 
             h1 {
@@ -44,7 +44,7 @@ export default {
             p {
                 color: $LightBlue;
                 line-height: 25px;
-                font-size: 17px;
+                font-size: 18px;
             }
             button {
                 border: none;
@@ -80,10 +80,11 @@ export default {
             }
         }
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1441px) {
         header {
             .title {
                 width: 32%;
+                margin: 70px 0 0 15%;
             }
         }
     }
@@ -98,7 +99,7 @@ export default {
             }
         }
     }
-    @media screen and (max-width: 965px) {
+    @media screen and (max-width: 980px) {
         
         header {
             flex-direction: column-reverse;
@@ -112,6 +113,20 @@ export default {
             .ContainerImg {
                 max-width: 700px;
                 align-self: flex-end;
+            }
+        }
+    }
+    @media screen and (max-width: 499px) {
+        header {
+            .title {
+
+                h1 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 14px;
+                    padding: 0 8%;
+                }
             }
         }
     }

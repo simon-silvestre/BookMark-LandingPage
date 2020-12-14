@@ -3,6 +3,7 @@
     <NavBar v-if="!mobileView" />
     <MobileNav v-if="mobileView" />
     <Header />
+    <Features />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import NavBar from './components/NavBar.vue'
 import MobileNav from '@/components/NavBarMobile.vue'
 import Header from './components/Header.vue'
+import Features from '@/components/Features.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
     MobileNav,
-    Header
+    Header,
+    Features
   },
    data() {
     return {
@@ -58,6 +61,7 @@ export default {
     padding: 10px 30px;
     border: none;
     border-radius: 5px;
+    font-weight: 600;
     -webkit-box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
     box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
   }
