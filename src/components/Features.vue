@@ -39,14 +39,14 @@ export default {
                     text: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
                 },
                 {
-                    img: '/img/illustration-features-tab-2.25a23733.svg',
-                    title: 'Bookmark in one click',
-                    text: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
+                    img: '/img/illustration-features-tab-2.11b0ec33.svg',
+                    title: 'Intelligent search',
+                    text: 'Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.'
                 },
                 {
-                    img: '/img/illustration-features-tab-1.25a23733.svg',
-                    title: 'Bookmark in one click',
-                    text: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
+                    img: '/img/illustration-features-tab-3.7f696303.svg',
+                    title: 'Share your bookmark',
+                    text: 'Easily share booksmarks and collection with others. Create a shareable link that you can send at the click of a button.'
                 }
             ]
         }
@@ -91,9 +91,9 @@ export default {
         .featureMenu {
             max-width: 640px;
             margin: 0 auto;
-            border-bottom: 1px solid #e1e2e6;
 
             button {
+                position: relative;
                 color: rgba(0, 0, 0, 0.5);
                 width: 33%;
                 height: 75px;
@@ -102,9 +102,17 @@ export default {
                 font-size: 16px;
                 outline: none;
                 cursor: pointer;
+                border-bottom: 1px solid #e1e2e6;
 
+                &.active::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    bottom: 0;
+                    border-bottom: 3px solid $SoftRed;
+                }
                 &.active {
-                    border-bottom: 5px solid $SoftRed;
                     color: rgba(0, 0, 0, 0.8);
                 }
             }
@@ -127,6 +135,7 @@ export default {
                     position: absolute;
                     width: 90%;
                     height: 100%;
+                    max-height: 400px;
                     top: 25%;
                     left: 0;
                     background-color: $SoftBlue;
@@ -149,6 +158,7 @@ export default {
     @media screen and (min-width: 1441px) {
         .feature .featureSlide .featureDescription {
             width: 32%;
+            margin: 70px 5% 0 15%;
         }
     }
       @media screen and (max-width: 1200px) {
@@ -199,16 +209,15 @@ export default {
             button {
                 width: 100%;
                 height: 60px;
-                border-top: 1px solid #e1e2e6;
-                border-bottom: 1px solid #e1e2e6;
 
                 &:nth-child(1) {
                     border-top: none;
                 }
-                &.active {
-                    width: fit-content;
-                    border-top: none;
-                    border-width: 3px;
+                &.active::after {
+                    content: '';
+                    display: block;
+                    width: 30%;
+                    left: 35%;
                 }
             }
         }
