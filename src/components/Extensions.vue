@@ -85,6 +85,7 @@ export default {
             
             .card {
                 position: relative;
+                overflow: hidden;
                 margin: 0 20px;
                 width: 280px;
                 height: 360px;
@@ -137,6 +138,19 @@ export default {
                     left: calc(50% - 104.4px);
                     padding: 15px 30px;
                     box-shadow: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 499px) {
+        .extensions {
+            .title {
+                h2 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 14px;
+                    padding: 0px 40px;
                 }
             }
         }
