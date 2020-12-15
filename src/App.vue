@@ -4,6 +4,7 @@
     <MobileNav v-if="mobileView" />
     <Header />
     <Features />
+    <Extensions />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import NavBar from './components/NavBar.vue'
 import MobileNav from '@/components/NavBarMobile.vue'
 import Header from './components/Header.vue'
 import Features from '@/components/Features.vue'
+import Extensions from '@/components/Extensions.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     NavBar,
     MobileNav,
     Header,
-    Features
+    Features,
+    Extensions
   },
    data() {
     return {

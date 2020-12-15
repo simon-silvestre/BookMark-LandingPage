@@ -34,17 +34,17 @@ export default {
             index: 0,
             features: [
                 {
-                    img: '/img/illustration-features-tab-1.25a23733.svg',
+                    img: require('@/assets/illustration-features-tab-0.svg'),
                     title: 'Bookmark in one click',
                     text: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
                 },
                 {
-                    img: '/img/illustration-features-tab-2.11b0ec33.svg',
+                    img: require('@/assets/illustration-features-tab-1.svg'),
                     title: 'Intelligent search',
                     text: 'Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.'
                 },
                 {
-                    img: '/img/illustration-features-tab-3.7f696303.svg',
+                    img: require('@/assets/illustration-features-tab-2.svg'),
                     title: 'Share your bookmark',
                     text: 'Easily share booksmarks and collection with others. Create a shareable link that you can send at the click of a button.'
                 }
@@ -64,8 +64,7 @@ export default {
     .feature {
         width: 100%;
         height: auto;
-        margin-top: 100px;
-        margin-bottom: 150px;
+        margin: 150px 0 18% 0;
         color: $LightBlue;
 
         h2 {
@@ -174,7 +173,7 @@ export default {
     }
     @media screen and (max-width: 980px) {
         .feature {
-            margin-top: 150px;
+            margin: 150px 0 150px 0;
         
             .featureSlide {
                 flex-direction: column;
