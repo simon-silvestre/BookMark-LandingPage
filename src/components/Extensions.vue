@@ -12,7 +12,9 @@
                 <h3>Add to Chrome</h3>
                 <p>Minimum version 62</p>
                 <hr class="cardSeparateur">
-                <button class="btn">Add & install Extension</button>
+                 <div class="boutonContainer">
+                    <button class="btn">Add & install Extension</button>
+                </div>
             </div>
             <div class="card">
                 <div class="imgContainer">
@@ -21,7 +23,9 @@
                 <h3>Add to Firefox</h3>
                 <p>Minimum version 55</p>
                 <hr class="cardSeparateur">
-                <button class="btn">Add & install Extension</button>
+                 <div class="boutonContainer">
+                    <button class="btn">Add & install Extension</button>
+                </div>
             </div>
             <div class="card">
                 <div class="imgContainer">
@@ -30,7 +34,9 @@
                 <h3>Add to Opera</h3>
                 <p>Minimum version 46</p>
                 <hr class="cardSeparateur">
-                <button class="btn">Add & install Extension</button>
+                <div class="boutonContainer">
+                    <button class="btn">Add & install Extension</button>
+                </div>
             </div>
         </div>
     </div>
@@ -133,9 +139,16 @@ export default {
                         opacity: .5;
                     }
                 }
+                .boutonContainer {
+                   position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+                }
                 button {
-                    bottom: 20px;
-                    left: calc(50% - 104.4px);
                     padding: 15px 30px;
                     box-shadow: none;
 

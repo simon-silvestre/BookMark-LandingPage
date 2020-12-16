@@ -88,30 +88,27 @@ export default {
                 padding: 15px 0;
                 border-bottom: 1px solid #e1e2e6;
                 cursor: pointer;
+                position: relative;
                 
                 &:nth-child(1) {
                     border-top: 1px solid #e1e2e6;
                 }
-                &[open] summary::-webkit-details-marker {
-                    transform: rotateZ(180deg);
+                &[open] summary::-webkit-details-marker, &[open] summary::marker {
                     color: $SoftRed;
                 }
 
                 summary {
                     outline: none;
                     opacity: .9;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    flex-direction: row-reverse;
                     transition: ease .5s;
 
-                    &::-webkit-details-marker {
+                    &::-webkit-details-marker, &::marker {
                         color: $SoftBlue;
-                        width: 20px;
-                        height: 20px;
-                        transform: rotateZ(90deg);
+                        width: 15px;
+                        height: 15px;
                         margin-right: 15px;
+                        position: absolute;
+                        right: 0;
                     }
                     &:hover {
                         color: $SoftRed;
