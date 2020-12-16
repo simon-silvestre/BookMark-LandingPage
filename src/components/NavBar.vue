@@ -2,7 +2,7 @@
     <div class="navBar">
         <img src="@/assets/logo-bookmark.svg" alt="logo de la marque">
         <nav>
-            <a href="">features</a>
+            <a href="#feature">features</a>
             <a href="">pricing</a>
             <a href="">contact</a>
             <button class="btn">login</button>

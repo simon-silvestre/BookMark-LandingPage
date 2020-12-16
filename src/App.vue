@@ -5,6 +5,8 @@
     <Header />
     <Features />
     <Extensions />
+    <Faq />
+    <Contact />
   </div>
 </template>
 
@@ -14,6 +16,8 @@ import MobileNav from '@/components/NavBarMobile.vue'
 import Header from './components/Header.vue'
 import Features from '@/components/Features.vue'
 import Extensions from '@/components/Extensions.vue'
+import Faq from '@/components/Faq.vue'
+import Contact from '@/components/Contact.vue'
 
 export default {
   name: 'App',
@@ -22,7 +26,9 @@ export default {
     MobileNav,
     Header,
     Features,
-    Extensions
+    Extensions,
+    Faq,
+    Contact
   },
    data() {
     return {
@@ -42,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
     $SoftBlue: hsl(231, 69%, 60%);
     $SoftRed: hsl(0, 94%, 66%);
@@ -53,6 +59,7 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   #app {
     font-family: 'Rubik', sans-serif;
@@ -67,5 +74,12 @@ export default {
     font-weight: 600;
     -webkit-box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
     box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
+    outline: none;
+    cursor: pointer;
+    transition: ease .1s;
+
+    &:active {
+      transform: scale(.98);
+    }
   }
 </style>

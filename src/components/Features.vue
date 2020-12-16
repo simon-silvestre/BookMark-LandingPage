@@ -1,5 +1,5 @@
 <template>
-    <div class="feature">
+    <div id="feature">
         <div class="title">
             <h2>Features</h2>
             <p>
@@ -61,7 +61,7 @@ export default {
     $DarkBlue: hsl(229, 31%, 21%);
     $LightBlue: hsl(229, 8%, 60%);
 
-    .feature {
+    #feature {
         width: 100%;
         height: auto;
         margin: 150px 0 18% 0;
@@ -155,13 +155,13 @@ export default {
         }
     }
     @media screen and (min-width: 1441px) {
-        .feature .featureSlide .featureDescription {
+        #feature .featureSlide .featureDescription {
             width: 32%;
             margin: 70px 5% 0 15%;
         }
     }
       @media screen and (max-width: 1200px) {
-        .feature {
+        #feature {
             .featureSlide .featureDescription {
                 margin: 50px 5% 0 8%;
            
@@ -172,7 +172,7 @@ export default {
         } 
     }
     @media screen and (max-width: 980px) {
-        .feature {
+        #feature {
             margin: 150px 0 150px 0;
         
             .featureSlide {
@@ -198,7 +198,7 @@ export default {
         }
     }
     @media screen and (max-width: 700px) {
-        .feature .featureMenu {
+        #feature .featureMenu {
             width: 80%;
             display: flex;
             flex-direction: column;
@@ -220,8 +220,8 @@ export default {
                 }
             }
         }
-        .feature .featureSlide .featureImg {
-             width: 100%;
+        #feature .featureSlide .featureImg {
+            width: 100%;
             align-self: flex-start;
 
             img {
@@ -230,7 +230,7 @@ export default {
         }
     }
     @media screen and (max-width: 499px) {
-        .feature {
+        #feature {
             h2 {
                 font-size: 25px;
             }

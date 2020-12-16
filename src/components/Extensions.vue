@@ -93,10 +93,10 @@ export default {
                 box-shadow: 0 15px 40px rgba(154,160,185,.05), 0 5px 10px hsla(231, 69%, 60%, .2);
 
                 &:nth-child(2) {
-                    transform: translateY(40px);
+                    margin-top: 40px;
                 }
                 &:nth-child(3) {
-                    transform: translateY(80px);
+                    margin-top: 80px;;
                 }
                 .imgContainer, h3, p, .cardSeparateur, button {
                     position: absolute;
@@ -140,6 +140,11 @@ export default {
                     box-shadow: none;
                 }
             }
+        }
+    }
+    @media screen and (max-width: 974px) {
+        .extensions .cardsContainer .card:nth-child(3) {
+            margin-top: 40px;
         }
     }
     @media screen and (max-width: 499px) {

@@ -6,7 +6,7 @@
                 <h2 @click="showNav = !showNav">X</h2>
             </div>
             <nav>
-                <a href="">features</a>
+                <a href="#feature">features</a>
                 <a href="">pricing</a>
                 <a href="">contact</a>
                 <button class="btn">login</button>
