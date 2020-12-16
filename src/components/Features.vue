@@ -114,6 +114,9 @@ export default {
                 &.active {
                     color: rgba(0, 0, 0, 0.8);
                 }
+                &:hover {
+                    color: $SoftRed;
+                }
             }
         }
         .featureSlide {
@@ -197,7 +200,7 @@ export default {
             }
         }
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 715px) {
         #feature .featureMenu {
             width: 80%;
             display: flex;

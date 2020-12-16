@@ -7,6 +7,7 @@
     <Extensions />
     <Faq />
     <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Features from '@/components/Features.vue'
 import Extensions from '@/components/Extensions.vue'
 import Faq from '@/components/Faq.vue'
 import Contact from '@/components/Contact.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
@@ -28,7 +30,8 @@ export default {
     Features,
     Extensions,
     Faq,
-    Contact
+    Contact,
+    Footer
   },
    data() {
     return {
@@ -69,14 +72,14 @@ export default {
     color: #fff;
     background-color: $SoftBlue;
     padding: 10px 30px;
-    border: none;
     border-radius: 5px;
     font-weight: 600;
     -webkit-box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
     box-shadow: 0px 2px 30px -8px rgba(148,148,148,1);
     outline: none;
     cursor: pointer;
-    transition: ease .1s;
+    border: 2px solid transparent;
+    transition: ease .5s;
 
     &:active {
       transform: scale(.98);

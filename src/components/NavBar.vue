@@ -4,7 +4,7 @@
         <nav>
             <a href="#feature">features</a>
             <a href="">pricing</a>
-            <a href="">contact</a>
+            <a href="#contact">contact</a>
             <button class="btn">login</button>
         </nav>
     </div>
@@ -48,9 +48,20 @@ export default {
             }
             a {
                 color:  $DarkBlue;
+                transition: ease .5s;
+
+                &:hover {
+                    color: $SoftRed;
+                }
             }
             button {
                 background-color: $SoftRed;
+
+                &:hover {
+                    border: 2px solid $SoftRed;
+                    color: $SoftRed;
+                    background-color: transparent;
+                }   
             }
         }
     }

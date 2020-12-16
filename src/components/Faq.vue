@@ -94,6 +94,7 @@ export default {
                 }
                 &[open] summary::-webkit-details-marker {
                     transform: rotateZ(180deg);
+                    color: $SoftRed;
                 }
 
                 summary {
@@ -103,14 +104,17 @@ export default {
                     align-items: center;
                     justify-content: space-between;
                     flex-direction: row-reverse;
+                    transition: ease .5s;
 
                     &::-webkit-details-marker {
-                        background: url('../assets/arrow.svg');
                         color: $SoftBlue;
                         width: 20px;
                         height: 20px;
                         transform: rotateZ(90deg);
                         margin-right: 15px;
+                    }
+                    &:hover {
+                        color: $SoftRed;
                     }
                 }
                 p {

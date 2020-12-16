@@ -8,7 +8,7 @@
             <nav>
                 <a href="#feature">features</a>
                 <a href="">pricing</a>
-                <a href="">contact</a>
+                <a href="#contact">contact</a>
                 <button class="btn">login</button>
             </nav>
             <div class="social">
@@ -18,7 +18,7 @@
         </div>
         <div class="navBar">
             <img v-show="!showNav" src="@/assets/logo-bookmark.svg" alt="logo de la marque">
-            <img v-show="!showNav" src="@/assets/menu_icon.webp" alt="icon menu hamburger" @click="showNav = !showNav">
+            <img v-show="!showNav" src="@/assets/menu_icon.svg" alt="icon menu hamburger" @click="showNav = !showNav">
         </div>
     </div>
 </template>

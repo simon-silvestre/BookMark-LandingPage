@@ -138,6 +138,12 @@ export default {
                     left: calc(50% - 104.4px);
                     padding: 15px 30px;
                     box-shadow: none;
+
+                    &:hover {
+                        background-color: #fff;
+                        border: 2px solid $SoftBlue;
+                        color: $SoftBlue;
+                    }
                 }
             }
         }

@@ -2,16 +2,37 @@
     <div id="contact">
         <p>35,000+ already joined</p>
         <h2>Stay up-to-date with what we're doing</h2>
-        <form @submit.prevent>
-            <input type="email" placeholder="Enter your email adress">
-            <button class="btn">Contact Us</button>
+        <form @submit.prevent="" :class="{ error : msg.email}">
+            <input type="email" placeholder="Enter your email adress" v-model="email">
+            <button class="btn" >Contact Us</button>
         </form>
     </div>
 </template>
 
 <script>
 export default {
-    
+    data() {
+        return {
+            email: "",
+            msg: []
+        }
+    },
+    watch: {
+        email(value){
+        // binding this to the data value in the email input
+        this.email = value;
+        this.validateEmail(value);
+        }
+    },
+    methods:{
+        validateEmail(value){
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                this.msg['email'] = '';
+            } else{
+                this.msg['email'] = 'Invalid Email Address';
+            } 
+        }
+    }
 }
 </script>
 
@@ -28,7 +49,7 @@ export default {
         align-items: center;
         flex-direction: column;
         width: 100%;
-        height: 300px;
+        height: 340px;
         background-color: $SoftBlue;
         color: #fff;
 
@@ -50,19 +71,50 @@ export default {
                 margin-bottom: 25px;
             }
         }
+        form.error {
+            position: relative;
+
+            &::after {
+                content: "Whoops, make sure it's an email";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                width: 240px;
+                border-radius: 0 0 3px 3px;
+                padding: 8px 0 5px 10px;
+                margin-top: -5px;
+                background-color: $SoftRed;
+                z-index: 1;
+            }
+            input {
+                border: 2px solid $SoftRed;
+                color: $SoftRed;
+            }
+        }
         input, button {
             padding: 12px 25px;
             border-radius: 5px;
-            border: none;
             outline: none;
         }
         input {
             width: 250px;
+            border: none;
+            z-index: 2;
+
+            &::placeholder {
+                opacity: .5;
+            }
         }
         button {
             background-color: $SoftRed;
             margin-left: 15px;
             box-shadow: none;
+
+            &:hover {
+                background-color: #fff;
+                border: 2px solid $SoftRed;
+                color: $SoftRed;
+            }
         }
     }
     @media screen and (max-width: 435px) {
@@ -87,6 +139,16 @@ export default {
                 }
                 button {
                      margin: 15px 0 0 0;
+                }
+            }
+            form.error {
+                &::after {
+                    width: 97%;
+                    margin-top: -83px;
+                    top: 122px;
+                }
+                button {
+                    margin: 40px 0 0 0;
                 }
             }
         }

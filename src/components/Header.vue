@@ -47,16 +47,27 @@ export default {
                 font-size: 18px;
             }
             button {
-                border: none;
                 padding: 15px 22px;
                 margin-top: 40px;
                 box-shadow: none;
                 font-weight: 600;
+
+                &:hover {
+                    background-color: #fff!important;
+                    border: 2px solid $SoftBlue;
+                    color: $SoftBlue;
+                }
                 &:nth-last-child(1) {
                     margin-left: 10px;
                     background-color: #f7f7f7;
                     color: $LightBlue;
                     box-shadow: 0px 10px 27px -12px rgba(128,128,128,1);
+
+                    &:hover {
+                        border: 2px solid $DarkBlue;
+                        color: $DarkBlue;
+                        box-shadow: none;
+                    }
                 }
             }
         }
