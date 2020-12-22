@@ -1,8 +1,8 @@
 <template>
     <div id="contact">
-        <p>35,000+ already joined</p>
-        <h2>Stay up-to-date with what we're doing</h2>
-        <form @submit.prevent="" :class="{ error : msg.email}">
+        <p data-aos="slide-right" data-aos-duration="1000">35,000+ already joined</p>
+        <h2 data-aos="slide-left" data-aos-duration="1000">Stay up-to-date with what we're doing</h2>
+        <form @submit.prevent="" :class="{ error : msg.email}" data-aos="slide-right" data-aos-duration="1000">
             <input type="email" placeholder="Enter your email adress" v-model="email">
             <button class="btn" >Contact Us</button>
         </form>

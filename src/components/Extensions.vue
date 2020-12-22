@@ -5,7 +5,7 @@
             <p>We've got more browsers in the pipeline. please do let us know if you've got a favourite you'd like us to prioritize.</p>
         </div>
         <div class="cardsContainer">
-            <div class="card">
+            <div class="card" data-aos="fade-down-right" data-aos-duration="1000">
                 <div class="imgContainer">
                     <img src="@/assets/chrome.svg" alt="">
                 </div>
@@ -16,7 +16,7 @@
                     <button class="btn">Add & install Extension</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="100">
                 <div class="imgContainer">
                     <img src="@/assets/firefox.svg" alt="">
                 </div>
@@ -27,7 +27,7 @@
                     <button class="btn">Add & install Extension</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="200">
                 <div class="imgContainer">
                     <img src="@/assets/opera.svg" alt="">
                 </div> 

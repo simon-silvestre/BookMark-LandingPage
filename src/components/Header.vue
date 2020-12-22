@@ -1,12 +1,12 @@
 <template>
     <header>
-        <div class="title">
+        <div class="title" data-aos="fade-down" data-aos-duration="1000">
             <h1>A Simple Bookmark Manager</h1>
             <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
             <button class="btn">Get it on Chrome</button>
             <button class="btn">Get it on Firefox</button>
         </div>
-        <div class="ContainerImg">
+        <div class="ContainerImg" data-aos="fade-left" data-aos-duration="1000">
             <span class="containerImg__ovale"></span>
             <img src="@/assets/illustration-hero.svg" alt="">
         </div>
